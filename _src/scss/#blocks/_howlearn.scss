@@ -1,0 +1,24 @@
+.howlearn__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media screen and (max-width: 880px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
+}
+.howlearn__point {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 12px 16px;
+}
+.howlearn__point-icon {
+  margin: 0 0 8px 0;
+}
+.howlearn__point-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+}

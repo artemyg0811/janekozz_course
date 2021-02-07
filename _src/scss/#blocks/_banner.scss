@@ -1,0 +1,41 @@
+.banner-card {
+  width: 100%;
+  border: 1px solid rgba(21,21,21,.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.banner-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 32px;
+  // background-image: url(../img/banner-img.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  @media screen and (max-width: 1000px) {
+    background-image: none!important;
+  }
+}
+.banner-card-title {
+  max-width: 500px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 24px 0;
+}
+.banner-card-link {
+  display: flex;
+  align-items: center;
+  &-icon {
+    transition: .2s;
+  }
+  &-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: $accent;
+    margin: 0 4px 0 0;
+  }
+  &:hover .banner-card-link-icon {
+    transform: translate(3px,0);
+  }
+}

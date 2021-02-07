@@ -1,0 +1,91 @@
+.lessons__point {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+.lessons-number {
+  width: 96px;
+  padding: 16px 0;
+  @media screen and (max-width: 600px) {
+    padding: 16px 0 12px 0;
+  }
+}
+.lessons-number-text {
+  width: 100%;
+  margin: 0 12px 0 0;
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  color: $accent;
+  margin: auto auto auto 0;
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+.lessons__acc {
+  width: 100%;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $main;
+    opacity: .2;
+  }
+  &._active .lessons__acc-arrow svg {
+    transform: scale(-1,-1);
+    transform-origin: center;
+    & path {
+      stroke: $accent;
+    }
+  }
+}
+.lessons__acc-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 0 12px 0 0;
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+.lessons__acc__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  cursor: pointer;
+}
+.lessons__acc-arrow {
+  margin: 0 24px 0 0;
+  @media screen and (max-width: 600px) {
+    margin: 0;
+  }
+}
+.lessons__acc-arrow svg{
+  transition: .2s;
+  & path {
+    transition: .2s;
+  }
+}
+.lessons__acc__body {
+  overflow: hidden;
+  transition: .2s;
+}
+.lessons__acc__body-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  opacity: .5;
+  margin: 0 24px 0 0;
+  padding: 0 0 12px 0;
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+}
