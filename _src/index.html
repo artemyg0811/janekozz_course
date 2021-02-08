@@ -128,7 +128,7 @@
           </div>
         </div>
       </nav>
-      <div class="nav__menu" id="signUp">
+      <!-- <div class="nav__menu" id="signUp">
         <div class="nav__menu__body">
           <div class="nav__menu__header">
             <div class="nav__menu__header__container">
@@ -184,7 +184,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <header class="header">
       <div class="header__body">
@@ -197,7 +197,7 @@
               <h1 class="header__slide-title">Профессия «Ньюборн фотограф»</h1>
               <p class="header__slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, sollicitudin eget condimentum ut, auctor eget nulla. Aenean auctor molestie sem quis euismod.</p>
               <div class="header__slide__buttons">
-                <a href="javascript:void(0)" class="header__slide-btn header__slide-btn-booking btn-booking">Подробнее</a>
+                <a href="#about" class="header__slide-btn">Записаться</a>
               </div>
             </div>
           </div>
@@ -650,10 +650,10 @@
         <div class="signup__body">
           <h2 class="title-section signup-title">Записаться на курс или получить бесплатную консультацию</h2>
           <div class="signup-form">
-            <form action="telegram_signup.php">
-              <input type="text" class="signup-input" placeholder="*Имя">
-              <input type="number" class="signup-input" placeholder="*Номер">
-              <button type="submit" class="signup-button">Записаться</button>
+            <form action="telegram_signup.php" method="GET" id="formSendSignupTelegram">
+              <input name="user_name" type="text" class="signup-input" placeholder="*Имя" required>
+              <input name="user_phone" type="tel" class="signup-input" placeholder="*Номер" required>
+              <button name="user_name" type="submit" class="signup-button">Записаться</button>
             </form>
           </div>
         </div>
@@ -667,7 +667,33 @@
         </div>
       </div>
     </footer>
+    <div class="response">
+      <div class="response__body">
+        <div class="response-block response-successful">
+          <div class="response-block-body">
+            <div class="response-block-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#46BB33"/>
+                <path d="M21.6656 8.9375L14.3344 18.6031L10 14.2719L8 16.2719L14.6656 22.9375L24 10.9375L21.6656 8.9375Z" fill="white"/>
+              </svg>
+            </div>
+            <span class="response-block-title">Заявка отправлена</span>
+          </div>
+        </div>
+        <div class="response-block response-error">
+          <div class="response-block-body">
+            <div class="response-block-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0C7.16429 0 0 7.16429 0 16C0 24.8357 7.16429 32 16 32C24.8357 32 32 24.8357 32 16C32 7.16429 24.8357 0 16 0ZM17.1429 23.7143C17.1429 23.8714 17.0143 24 16.8571 24H15.1429C14.9857 24 14.8571 23.8714 14.8571 23.7143V14C14.8571 13.8429 14.9857 13.7143 15.1429 13.7143H16.8571C17.0143 13.7143 17.1429 13.8429 17.1429 14V23.7143ZM16 11.4286C15.5514 11.4194 15.1243 11.2348 14.8102 10.9143C14.4962 10.5938 14.3204 10.163 14.3204 9.71429C14.3204 9.2656 14.4962 8.83478 14.8102 8.51429C15.1243 8.19379 15.5514 8.00916 16 8C16.4486 8.00916 16.8757 8.19379 17.1898 8.51429C17.5038 8.83478 17.6796 9.2656 17.6796 9.71429C17.6796 10.163 17.5038 10.5938 17.1898 10.9143C16.8757 11.2348 16.4486 11.4194 16 11.4286Z" fill="#B8261E"/>
+              </svg>
+            </div>
+            <span class="response-block-title">Ошибка</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

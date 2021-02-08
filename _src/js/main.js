@@ -22,7 +22,8 @@ menuClose.addEventListener('click', function() {
   body.classList.remove('_lock');
 });
 
-const form = document.querySelector('#formSendTelegram');
+// ОТПРАВКА ФОРМЫ
+const form = document.querySelector('#formSendSignupTelegram');
 
 form.addEventListener('submit', formSend);
 
@@ -31,7 +32,7 @@ async function formSend(e) {
 
   const formData = new FormData(form);
 
-  const response = await fetch('telegram.php', {
+  const response = await fetch('telegram_signup.php', {
     method: 'POST',
     body: formData
   });

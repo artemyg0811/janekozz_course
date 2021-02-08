@@ -1,5 +1,37 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Raleway-Medium";
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora-Regular";
+  font-display: swap;
+  src: url("../fonts/Lora-Regular.woff") format("woff"), url("../fonts/Lora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  font-display: swap;
+  src: url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --maincolor: #212121;
   --secondarycolor: #4D4D4D;
@@ -673,7 +705,7 @@ section {
 }
 
 .header {
-  margin: 0 0 118px 0;
+  margin: 0 0 100px 0;
 }
 
 .header__body {
@@ -736,6 +768,7 @@ section {
   font-family: "Lora", serif;
   font-size: 42px;
   color: var(--maincolor);
+  line-height: 1.3;
   margin: 0 0 18px 0;
 }
 
@@ -764,10 +797,7 @@ section {
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-}
-
-.header__slide-btn-booking {
-  background: var(--maincolor);
+  background: var(--accentcolor);
   color: #FFFFFF;
 }
 
@@ -1274,6 +1304,7 @@ section {
 .signup-form form input,
 .signup-form form button {
   margin: 0 12px;
+  height: 42px;
 }
 
 .signup-input {
@@ -1335,6 +1366,64 @@ section {
   color: var(--accentcolor);
 }
 
+.response {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.response-block {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: #FFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.response-block._show {
+  -webkit-transform: translate(-20px, 0);
+      -ms-transform: translate(-20px, 0);
+          transform: translate(-20px, 0);
+}
+
+.response-block-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 16px;
+}
+
+.response-block-icon {
+  margin: 0 12px 0 0;
+}
+
+.response-block-title {
+  font-weight: 600;
+}
+
+.response-successful .response-block-title {
+  color: #46BB33;
+}
+
+.response-error .response-block-title {
+  color: #B8261E;
+}
+
 @media screen and (max-width: 1140px) {
   .header__slide__content {
     left: 120px;
@@ -1371,6 +1460,20 @@ section {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  section {
+    margin: 0 0 120px 0;
+  }
+
+  .header {
+    margin: 0 0 80px 0;
+  }
+
+  .header__slide-title {
+    font-size: 36px;
   }
 }
 
@@ -1413,6 +1516,21 @@ section {
 @media screen and (max-width: 760px) {
   .fits__point-title {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-form form input,
+  .signup-form form button {
+    margin: 12px 0;
   }
 }
 
@@ -1466,6 +1584,20 @@ section {
 
   .lessons__acc__body-text {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  section {
+    margin: 0 0 80px 0;
+  }
+
+  .header {
+    margin: 0 0 60px 0;
+  }
+
+  .header__slide-title {
+    font-size: 28px;
   }
 }
 
@@ -1560,6 +1692,14 @@ section {
 
 }
 
+ @media screen and (max-width: 840px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media screen and (max-width: 768px){
 
 @supports (-webkit-appearance:none){
@@ -1576,6 +1716,14 @@ section {
 
 }
 
+ @media screen and (max-width: 700px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media screen and (max-width: 650px){
 
 @supports (-webkit-appearance:none){
@@ -1585,6 +1733,14 @@ section {
 }
 
  @media screen and (max-width: 600px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 550px){
 
 @supports (-webkit-appearance:none){
 

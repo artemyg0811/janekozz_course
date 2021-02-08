@@ -1,5 +1,11 @@
 .header {
-  margin: 0 0 118px 0;
+  margin: 0 0 100px 0;
+  @media screen and (max-width: 840px) {
+    margin: 0 0 80px 0;
+  }
+  @media screen and (max-width: 550px) {
+    margin: 0 0 60px 0;
+  }
 }
 .header__body {
   width: 100%;
@@ -70,7 +76,14 @@
   font-family: "Lora", serif;
   font-size: 42px;
   color: $main;
+  line-height: 1.3;
   margin: 0 0 18px 0;
+  @media screen and (max-width: 840px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 28px;
+  }
 }
 .header__slide-text {
   max-width: 560px;
@@ -88,43 +101,14 @@
     width: 100%;
   }
 }
-// .slick-active .header__slide-title {
-//     animation-name: showSlide;
-//     animation-duration: $animSlideDuration;
-//     animation-fill-mode: forwards;
-// }
-// .slick-active .header__slide-text {
-//     animation-name: showSlide;
-//     animation-duration: $animSlideDuration;
-//     animation-delay: .1s;
-//     animation-fill-mode: forwards;
-// }
-// .slick-active .header__slide__buttons {
-//     animation-name: showSlide;
-//     animation-duration: $animSlideDuration;
-//     animation-delay: .2s;
-//     animation-fill-mode: forwards;
-// }
-// @keyframes showSlide {
-//   from {
-//     opacity: 0;
-//     transform: $animSlideTranslate;
-//   } to {
-//     opacity: 1;
-//     transform: translate(0,0);
-//   }
-// }
 .header__slide-btn {
   width: 50%;
   padding: 11px 0;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-  &-booking {
-    background: $main;
-    // font-weight: 600;
-    color: #FFFFFF;
-  }
+  background: $accent;
+  color: #FFFFFF;
   &-more a{
     font-weight: 400;
     color: #FFFFFF;
